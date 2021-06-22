@@ -1,0 +1,61 @@
+﻿<Window x:Class="Practicka.MyProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practicka"
+        mc:Ignorable="d"
+        Title="MyProfileWindow" Height="450" Width="600">
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="backgroundProfile.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label x:Name="labelLogo" Content="Мой профиль" Margin="192,15,192,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="24" Foreground="White">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelName" Content="Имя" Margin="111,93,415,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="24" Foreground="White">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelEmail" Content="Эл.Почта" Margin="111,139,350,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="24" Foreground="White">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelvoucher" Content="Мои путевки" Margin="111,182,298,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="24" Foreground="White">
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Button Content="" HorizontalAlignment="Left" Margin="6,6,0,0" VerticalAlignment="Top" Width="36" Height="30" Click="Button_Click">
+            <Button.BorderBrush>
+                <ImageBrush ImageSource="arrow.png"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="arrow.png"/>
+            </Button.Background>
+        </Button>
+        <ListBox x:Name="listVoucher" Height="189" Margin="98,221,98,0" VerticalAlignment="Top" BorderThickness="1,1,1,1" FontFamily="Snap ITC" FontSize="20" Foreground="White"  >
+            <ListBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.1"/>
+            </ListBox.Background>
+        </ListBox>
+        <Label x:Name="labelNameUser" Content="" Margin="284,93,125,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="24" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" >
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelEmailUser" Content="" Margin="284,139,125,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="24" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" >
+            <Label.Background>
+                <SolidColorBrush Color="Transparent" Opacity="0"/>
+            </Label.Background>
+        </Label>
+
+    </Grid>
+</Window>

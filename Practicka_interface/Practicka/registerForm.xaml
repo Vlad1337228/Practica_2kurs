@@ -1,0 +1,52 @@
+﻿<Window x:Class="Practicka.registerForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practicka"
+        mc:Ignorable="d"
+        Title="registerForm" Height="650" Width="632"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="backgroundRegister.png"/>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Left" Margin="220,27,0,0" TextWrapping="Wrap" Text="Регистрация
+                   " VerticalAlignment="Top" Width="164" Foreground="#FF6E6E6E" Height="30" FontFamily="Verdana" FontSize="25"/>
+        <Label x:Name="labelRegisterName" Content="Имя" HorizontalAlignment="Left" Margin="147,120,0,448" Width="57" FontFamily="Verdana" FontSize="20" Foreground="#FF6E6E6E">
+            <Label.Background>
+                <SolidColorBrush Color="White" Opacity="0.79"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelEmail" Content="Эл.Почта" HorizontalAlignment="Left" Margin="147,194,0,378" Width="106" FontFamily="Verdana" FontSize="20" Foreground="#FF6E6E6E">
+            <Label.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <Label x:Name="labelPassword" Content="Пароль" HorizontalAlignment="Left" Margin="147,271,0,290" Width="106" FontFamily="Verdana" FontSize="20" Foreground="#FF6E6E6E">
+            <Label.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </Label.Background>
+        </Label>
+        <PasswordBox x:Name="textBoxPass" HorizontalAlignment="Left" Margin="272,274,0,0" VerticalAlignment="Top" Width="185" Height="24" MaxLength="10" BorderBrush="#FF6E6E6E" BorderThickness="0,0,0,1">
+
+            <PasswordBox.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </PasswordBox.Background>
+        </PasswordBox>
+        <Button x:Name="buttonRegister" Content="OK" Margin="272,397,290,0" VerticalAlignment="Top" Background="White" BorderBrush="#FFC5C4C4" BorderThickness="1,1,1,1" Height="30" Click="buttonRegister_Click" />
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Margin="272,126,0,0" FontFamily="Verdana" FontSize="20" Foreground="#FF6E6E6E" BorderBrush="#FF6E6E6E" BorderThickness="0,0,0,1">
+
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Margin="272,199,0,0" FontFamily="Verdana" FontSize="20" Foreground="#FF6E6E6E" BorderBrush="#FF6E6E6E" BorderThickness="0,0,0,1">
+
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+
+    </Grid>
+</Window>

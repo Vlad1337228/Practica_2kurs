@@ -1,0 +1,46 @@
+C:\Users\Pasha\source\repos\Practicka\Practicka\bin\Debug\Practicka.exe.config
+C:\Users\Pasha\source\repos\Practicka\Practicka\bin\Debug\Practicka.exe
+C:\Users\Pasha\source\repos\Practicka\Practicka\bin\Debug\Practicka.pdb
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka.csprojAssemblyReference.cache
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\MainWindow.g.cs
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\App.g.cs
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka_MarkupCompile.cache
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka_MarkupCompile.lref
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\MainWindow.baml
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka.g.resources
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka.Properties.Resources.resources
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka.csproj.GenerateResource.cache
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka.csproj.CoreCompileInputs.cache
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka.exe
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\Practicka.pdb
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\registerForm.g.cs
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\SearchWindow.g.cs
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\registerForm.baml
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\SearchWindow.baml
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\EnterWindow.g.cs
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\EnterWindow.baml
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\MyProfileWindow.g.cs
+C:\Users\Pasha\source\repos\Practicka\Practicka\obj\Debug\MyProfileWindow.baml
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\bin\Debug\Practicka.exe.config
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\bin\Debug\Practicka.exe
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\bin\Debug\Practicka.pdb
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka.csproj.AssemblyReference.cache
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\EnterWindow.g.cs
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\MainWindow.g.cs
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\MyProfileWindow.g.cs
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\registerForm.g.cs
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\SearchWindow.g.cs
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\App.g.cs
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka_MarkupCompile.cache
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka_MarkupCompile.lref
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\EnterWindow.baml
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\MainWindow.baml
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\MyProfileWindow.baml
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\registerForm.baml
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\SearchWindow.baml
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka.g.resources
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka.Properties.Resources.resources
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka.csproj.GenerateResource.cache
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka.csproj.CoreCompileInputs.cache
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka.exe
+D:\вуз\курсач\практика 2 курс\Practicka_interface\Practicka\obj\Debug\Practicka.pdb

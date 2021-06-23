@@ -34,6 +34,7 @@ namespace Practicka
         public static Voucher voucher;
         public static Sold_Voucher sold_voucher;
         public static Offer offer;
+        public static List<Voucher> vouchers;
 
         public static bool Vhod = false; // вошел или вышел пользователь
 
@@ -76,6 +77,11 @@ namespace Practicka
             MainWindow.offer = null;
             mainWindow.buttonExit.Visibility = Visibility.Hidden;
             mainWindow.buttonEnter.Visibility = Visibility.Visible;
+        }
+
+        private void textBoxAdeparture_date_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

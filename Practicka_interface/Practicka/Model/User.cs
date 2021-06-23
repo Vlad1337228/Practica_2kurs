@@ -14,7 +14,7 @@ namespace Practicka.Model
         public string password { get; set; }
         public string email { get; set; }
         public short count_vouchers { get; set; }
-        public short sale { get; set; }
+        public short sale { get; set; } = 0;
 
     }
 }

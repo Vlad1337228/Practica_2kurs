@@ -27,16 +27,6 @@
             </TextBox.RenderTransform>
         </TextBox>
         <Label x:Name="labelCity1" Content="Город" HorizontalAlignment="Left" Margin="953,114,0,0" VerticalAlignment="Top" Height="56" Width="136" FontFamily="Verdana" FontSize="40" Foreground="White"/>
-        <TextBox x:Name="textBoxCity1" Height="52" TextWrapping="Wrap" VerticalAlignment="Top" Margin="1137,117,417,0" RenderTransformOrigin="0.5,0.5" TabIndex="2147483643" FontSize="24" FontFamily="Verdana" VerticalContentAlignment="Center">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.297"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
         <Label x:Name="labelDate1" Content="Дата" HorizontalAlignment="Left" Margin="276,214,0,0" VerticalAlignment="Top" Height="56" Width="154" FontFamily="Verdana" FontSize="40" Foreground="White"/>
         <TextBox x:Name="textBoxDate3" HorizontalAlignment="Left" Height="52" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="516,219,0,0" RenderTransformOrigin="0.5,0.5" TabIndex="2147483643" FontSize="24" FontFamily="Verdana" SpellCheck.IsEnabled="True" VerticalContentAlignment="Center">
             <TextBox.RenderTransform>
@@ -58,8 +48,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label x:Name="labelEating1" Content="Питание" HorizontalAlignment="Left" Margin="953,199,0,0" VerticalAlignment="Top" Height="56" Width="184" FontFamily="Verdana" FontSize="40" Foreground="White"/>
-        <ComboBox x:Name="comboBoxEating1" Margin="1158,204,417,0" VerticalAlignment="Top" Height="52" FontSize="24" SelectionChanged="comboBoxEating1_SelectionChanged"/>
+        <Label x:Name="labelEating1" Content="Питание" HorizontalAlignment="Left" Margin="951,214,0,0" VerticalAlignment="Top" Height="56" Width="184" FontFamily="Verdana" FontSize="40" Foreground="White"/>
         <Label x:Name="labelValue1" Content="Стоимость" HorizontalAlignment="Left" Margin="276,315,0,0" VerticalAlignment="Top" Height="56" Width="239" FontFamily="Verdana" FontSize="40" Foreground="White"/>
         <TextBox x:Name="textBoxValue3" HorizontalAlignment="Left" Height="52" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Margin="516,315,0,0" RenderTransformOrigin="0.5,0.5" TabIndex="2147483643" FontSize="24" FontFamily="Verdana" VerticalContentAlignment="Center">
             <TextBox.RenderTransform>
@@ -71,7 +60,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="textBoxValue4" HorizontalAlignment="Left" Height="52" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Margin="718,312,0,0" RenderTransformOrigin="0.5,0.5" TabIndex="2147483643" FontSize="24" FontFamily="Verdana" VerticalContentAlignment="Center">
+        <TextBox x:Name="textBoxValue4" HorizontalAlignment="Left" Height="52" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" Margin="718,315,0,0" RenderTransformOrigin="0.5,0.5" TabIndex="2147483643" FontSize="24" FontFamily="Verdana" VerticalContentAlignment="Center">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -81,9 +70,8 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label x:Name="labelSalesText1" Content="Ваша скидка" HorizontalAlignment="Left" Margin="951,286,0,0" VerticalAlignment="Top" Height="56" Width="277" FontFamily="Verdana" FontSize="40" Foreground="White"/>
-        <Label x:Name="labelSales1" Content="" Margin="1267,293,417,0" VerticalAlignment="Top" Height="56" FontFamily="Verdana" FontSize="24" Foreground="White" RenderTransformOrigin="0.357,0.643" Background="White"/>
-        <Button Content="Найти" HorizontalAlignment="Left" Margin="859,388,0,0" VerticalAlignment="Top" Width="191" Height="74" BorderBrush="White" Foreground="White" FontFamily="Verdana" FontSize="25">
+        <Label x:Name="labelSalesText1" Content="Ваша скидка" HorizontalAlignment="Left" Margin="951,315,0,0" VerticalAlignment="Top" Height="56" Width="277" FontFamily="Verdana" FontSize="40" Foreground="White"/>
+        <Button Content="Найти" HorizontalAlignment="Left" Margin="859,388,0,0" VerticalAlignment="Top" Width="191" Height="74" BorderBrush="White" Foreground="White" FontFamily="Verdana" FontSize="25" Click="Button_Click_2">
             <Button.Background>
                 <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
             </Button.Background>
@@ -106,14 +94,14 @@
             </Button.BorderBrush>
         </Button>
         <Image x:Name="imageArrowLeft1" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="1342,398,0,0" Source="arrow.png"/>
-        <Image x:Name="imageArrowRight1" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="1493,398,0,0" Source="arrow_Right.png"/>
+        <Image x:Name="imageArrowRight1" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="1493,398,0,0" Source="arrow_Right.png" MouseLeftButtonDown="imageArrowRight1_MouseLeftButtonDown"/>
         <Label x:Name="labelPage1" Content="1" HorizontalAlignment="Left" Margin="1438,402,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Verdana"/>
         <Label x:Name="labelRes7" Content="Страна" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,477,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelCountryRes4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="433,477,0,0" Width="216" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes8" Content="Город" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,526,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelRes9" Content="Дата" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,580,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
-        <Label x:Name="labelDate1Res4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="433,583,0,0" Width="83" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" RenderTransformOrigin="-0.221,3.434"/>
-        <Label x:Name="labelDate2Res3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="567,583,0,0" Width="83" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
+        <Label x:Name="labelDate1Res4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="433,583,0,0" Width="83" FontFamily="Verdana" FontSize="13" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" RenderTransformOrigin="-0.221,3.434"/>
+        <Label x:Name="labelDate2Res3" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="567,583,0,0" Width="83" FontFamily="Verdana" FontSize="13" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes10" Content="Экскурсия" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="689,477,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelExRes4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="838,477,0,0" Width="460" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes11" Content="Питание" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="689,526,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
@@ -123,8 +111,8 @@
         <Label x:Name="labelCountryRes5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,657,0,0" Width="216" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes2_Copy2" Content="Город" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,707,0,0" Width="134" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelRes3_Copy2" Content="Дата" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,761,0,0" Width="134" FontFamily="Verdana" FontSize="18" Foreground="White"/>
-        <Label x:Name="labelDate1Res5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,763,0,0" Width="82" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" RenderTransformOrigin="-0.221,3.434"/>
-        <Label x:Name="labelDate2Res4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="568,763,0,0" Width="82" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
+        <Label x:Name="labelDate1Res5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,763,0,0" Width="82" FontFamily="Verdana" FontSize="13" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" RenderTransformOrigin="-0.221,3.434"/>
+        <Label x:Name="labelDate2Res4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="568,763,0,0" Width="82" FontFamily="Verdana" FontSize="13" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes4_Copy2" Content="Экскурсия" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="690,657,0,0" Width="132" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelExRes5" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="838,657,0,0" Width="460" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes5_Copy2" Content="Питание" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="690,707,0,0" Width="132" FontFamily="Verdana" FontSize="18" Foreground="White"/>
@@ -134,8 +122,8 @@
         <Label x:Name="labelCountryRes6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="433,837,0,0" Width="216" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes2_Copy3" Content="Город" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,886,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelRes3_Copy3" Content="Дата" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,940,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
-        <Label x:Name="labelDate1Res6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="433,943,0,0" Width="83" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" RenderTransformOrigin="-0.221,3.434"/>
-        <Label x:Name="labelDate2Res3_____1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="567,943,0,0" Width="83" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
+        <Label x:Name="labelDate1Res6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="433,943,0,0" Width="83" FontFamily="Verdana" FontSize="13" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" RenderTransformOrigin="-0.221,3.434"/>
+        <Label x:Name="labelDate2Res3_____1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="567,943,0,0" Width="83" FontFamily="Verdana" FontSize="13" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes4_Copy3" Content="Экскурсия" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="689,837,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelExRes6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="838,837,0,0" Width="460" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes5_Copy3" Content="Питание" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="690,886,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
@@ -164,16 +152,28 @@
                 <ImageBrush ImageSource="plus.png"/>
             </Button.Background>
         </Button>
-        <Label Content="" HorizontalAlignment="Left" Margin="434,532,0,0" VerticalAlignment="Top" Width="217" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana"/>
+        <Label x:Name="textBoxCity1" Content="" HorizontalAlignment="Left" Margin="434,532,0,0" VerticalAlignment="Top" Width="217" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" Foreground="White" FontSize="18"/>
         <Label HorizontalAlignment="Left" Margin="451,411,0,0" VerticalAlignment="Top"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="838,589,0,0" VerticalAlignment="Top" Width="251" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="434,713,0,0" VerticalAlignment="Top" Width="217" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="838,770,0,0" VerticalAlignment="Top" Width="251" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="433,891,0,0" VerticalAlignment="Top" Width="216" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" />
-        <Label Content="" HorizontalAlignment="Left" Margin="838,943,0,0" VerticalAlignment="Top" Width="251" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="838,532,0,0" VerticalAlignment="Top" Width="460" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18" />
-        <Label Content="" HorizontalAlignment="Left" Margin="838,713,0,0" VerticalAlignment="Top" Width="460" Height="33" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="838,885,0,0" VerticalAlignment="Top" Width="460" Height="32" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18"/>
+        <Label x:Name="textBoxPrice1" Content="" HorizontalAlignment="Left" Margin="838,577,0,0" VerticalAlignment="Top" Width="251" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" Foreground="White" FontSize="18"/>
+        <Label x:Name="textBoxCity2" Content="" HorizontalAlignment="Left" Margin="434,713,0,0" VerticalAlignment="Top" Width="217" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18" Foreground="White"/>
+        <Label x:Name="textBoxPrice2" Content="" HorizontalAlignment="Left" Margin="838,764,0,0" VerticalAlignment="Top" Width="251" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" Foreground="White" FontSize="18"/>
+        <Label x:Name="textBoxCity3" Content="" HorizontalAlignment="Left" Margin="433,891,0,0" VerticalAlignment="Top" Width="216" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" Foreground="White" FontSize="18" />
+        <Label x:Name="textBoxPrice3" Content="" HorizontalAlignment="Left" Margin="838,937,0,0" VerticalAlignment="Top" Width="251" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18" Foreground="White"/>
+        <Label x:Name="textBoxEat1" Content="" HorizontalAlignment="Left" Margin="838,532,0,0" VerticalAlignment="Top" Width="460" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18" Foreground="White" />
+        <Label x:Name="textBoxEat2" Content="" HorizontalAlignment="Left" Margin="838,713,0,0" VerticalAlignment="Top" Width="460" Height="33" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18" Foreground="White"/>
+        <Label x:Name="textBoxEat3" Content="" HorizontalAlignment="Left" Margin="838,885,0,0" VerticalAlignment="Top" Width="460" Height="32" BorderBrush="White" BorderThickness="0,0,0,1" FontFamily="Verdana" FontSize="18" Foreground="White"/>
+        <ComboBox x:Name="comboBoxEating" HorizontalAlignment="Left" Margin="1142,214,0,0" VerticalAlignment="Top" Width="357" Height="56" SelectionChanged="ComboBox_SelectionChanged" FontFamily="Verdana" FontSize="24" VerticalContentAlignment="Center">
+            <Button Content="Завтрак" HorizontalContentAlignment="Left">
+                <Button.Background>
+                    <SolidColorBrush Color="#FFBDBDBD" Opacity="0"/>
+                </Button.Background>
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                </Button.BorderBrush>
+            </Button>
+        </ComboBox>
+        <TextBox x:Name="textBoxCity" HorizontalAlignment="Left" Height="53" Margin="1142,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="357" FontFamily="Verdana" FontSize="24" FontWeight="Medium" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textBoxSale" HorizontalAlignment="Left" Height="51" Margin="1254,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontFamily="Verdana" FontSize="24" VerticalContentAlignment="Center" IsReadOnly="True"/>
 
     </Grid>
 </Window>

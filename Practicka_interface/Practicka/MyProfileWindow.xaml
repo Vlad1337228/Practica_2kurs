@@ -41,7 +41,7 @@
                 <ImageBrush ImageSource="arrow.png"/>
             </Button.Background>
         </Button>
-        <ListBox x:Name="listVoucher" Height="189" Margin="98,221,98,0" VerticalAlignment="Top" BorderThickness="1,1,1,1" FontFamily="Snap ITC" FontSize="20" Foreground="White"  >
+        <ListBox x:Name="listVoucher" Height="189" Margin="98,221,98,0" VerticalAlignment="Top" BorderThickness="1,1,1,1" FontFamily="Verdana" FontSize="18" Foreground="White" SelectionChanged="listVoucher_SelectionChanged_1"  >
             <ListBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.1"/>
             </ListBox.Background>
@@ -56,6 +56,14 @@
                 <SolidColorBrush Color="Transparent" Opacity="0"/>
             </Label.Background>
         </Label>
+        <Button x:Name="updateVoucher" Content="Удалить путевку" HorizontalAlignment="Left" Margin="376,196,0,0" VerticalAlignment="Top" Width="118" FontFamily="Verdana" Foreground="White" Click="updateVoucher_Click">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF35FF08"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FF3D493A" Opacity="0"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

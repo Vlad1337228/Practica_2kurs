@@ -66,9 +66,8 @@ namespace Practicka.Controllers
                         MainWindow.connection.Close();
                         if (user.id_voucher!=0)
                         {
-                            ControllerVoucher controllerVoucher = new ControllerVoucher();
-                            MainWindow.voucher= controllerVoucher.ReturnVoucher(user.id_voucher);
-                            //доделать возвращение путевки у клиента
+                            ControllerVoucher cv = new ControllerVoucher();
+                            cv.ReturnVoucher(MainWindow.user.id_voucher);
                         }
                         return true;
                     }
@@ -92,7 +91,7 @@ namespace Practicka.Controllers
                 user.email = sqlDataReader.GetString(3);
                 user.password = sqlDataReader.GetString(4);
                 user.count_vouchers = sqlDataReader.GetInt16(5);
-                user.sale = sqlDataReader.GetInt16(6);
+                user.sale =(short)CheckSale(user.count_vouchers);
                 return (user,true);
             }
             catch (Exception e)
@@ -100,6 +99,19 @@ namespace Practicka.Controllers
                 MessageBox.Show("Ошибка системы. Название ошибки: " + e);
                 return (null, false);
             }
+        }
+
+        private int CheckSale(int i)
+        {
+            if (i >= 1 && i < 3)
+                return 2;
+            if (i >= 3 && i < 7)
+                return 5;
+            if (i >= 7 && i < 10)
+                return 8;
+            if (i >= 10)
+                return 10;
+            return 0;
         }
 
         private bool Check_RowsInDB(SqlDataReader sql)

@@ -48,7 +48,7 @@ namespace Practicka.Controllers
                 MainWindow.connection.Open();
                 command.ExecuteNonQuery();
                 SqlDataReader sqlDataReader = command.ExecuteReader();
-                OutVoucher(sqlDataReader);
+                OutVouchers(sqlDataReader);
                 MainWindow.connection.Close();
                 sqlDataReader.Close();
             }
@@ -80,7 +80,7 @@ namespace Practicka.Controllers
             string s = dt.Year.ToString() + "-" + dt.Month.ToString() + "-" + dt.Day.ToString();
             return s;
         }
-        public void OutVoucher(SqlDataReader sql)
+        public void OutVouchers(SqlDataReader sql)
         {
             List<Voucher> l = new List<Voucher>();
             while(sql.Read())
@@ -196,9 +196,35 @@ namespace Practicka.Controllers
         }
 
        
-        public Voucher ReturnVoucher(int id_voucher)
+        public void ReturnVoucher(int id_voucher)
         {
-            throw new NotImplementedException();
+            using (SqlCommand command = new SqlCommand($"SELECT * FROM [Voucher] WHERE id={id_voucher} ", MainWindow.connection))
+            {
+                MainWindow.connection.Open();
+                command.ExecuteNonQuery();
+                SqlDataReader sqlDataReader = command.ExecuteReader();
+                OutVoucher(sqlDataReader);
+                MainWindow.connection.Close();
+                sqlDataReader.Close();
+            }
+        }
+
+        private void OutVoucher(SqlDataReader sql)
+        {
+            Voucher v = new Voucher();
+            while (sql.Read())
+            {
+                v.id = (Int32)sql.GetValue(0);
+                v.sold = (Int32)sql.GetValue(1);
+                v.send = (DateTime)sql.GetValue(2);
+                v.back = (DateTime)sql.GetValue(3);
+                v.excursion = sql.GetValue(4).ToString();
+                v.eating = sql.GetValue(5).ToString();
+                v.city = sql.GetValue(6).ToString();
+                v.country = sql.GetValue(7).ToString();
+               
+            }
+            MainWindow.voucher = v;
         }
     }
 }

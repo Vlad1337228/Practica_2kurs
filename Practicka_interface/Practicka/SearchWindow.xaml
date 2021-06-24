@@ -85,16 +85,8 @@
                 <SolidColorBrush Color="White" Opacity="0"/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="buttonUpdate1" Content="" HorizontalAlignment="Left" Margin="1612,411,0,0" VerticalAlignment="Top" Width="46" Height="46">
-            <Button.Background>
-                <ImageBrush ImageSource="update.png"/>
-            </Button.Background>
-            <Button.BorderBrush>
-                <SolidColorBrush Color="#FF707070" Opacity="0"/>
-            </Button.BorderBrush>
-        </Button>
-        <Image x:Name="imageArrowLeft1" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="1342,398,0,0" Source="arrow.png"/>
-        <Image x:Name="imageArrowRight1" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="1493,398,0,0" Source="arrow_Right.png" MouseLeftButtonDown="imageArrowRight1_MouseLeftButtonDown"/>
+        <Image x:Name="imageArrowLeft1" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="1342,398,0,0" Source="arrow.png" MouseDown="imageArrowLeft1_MouseDown"/>
+        <Image x:Name="imageArrowRight1" HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="64" Margin="1493,398,0,0" Source="arrow_Right.png" MouseDown="imageArrowRight1_MouseDown"/>
         <Label x:Name="labelPage1" Content="1" HorizontalAlignment="Left" Margin="1438,402,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Verdana"/>
         <Label x:Name="labelRes7" Content="Страна" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,477,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelCountryRes4" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="433,477,0,0" Width="216" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
@@ -128,7 +120,7 @@
         <Label x:Name="labelExRes6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="838,837,0,0" Width="460" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes5_Copy3" Content="Питание" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="690,886,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelRes6_Copy3" Content="Стоимость" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="689,940,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
-        <Button x:Name="buttonPlus1" Content="" HorizontalAlignment="Left" Margin="1610,591,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.75,0.594">
+        <Button x:Name="buttonPlus1" Content="" HorizontalAlignment="Left" Margin="1610,591,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.5,0.5" MouseDown="buttonPlus1_MouseDown"  >
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FF707070" Opacity="0"/>
             </Button.BorderBrush>
@@ -136,7 +128,7 @@
                 <ImageBrush ImageSource="plus.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonPlus_Copy1" Content="" HorizontalAlignment="Left" Margin="1610,773,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.75,0.594">
+        <Button x:Name="buttonPlus_Copy1" Content="" HorizontalAlignment="Left" Margin="1610,773,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.75,0.594" MouseDown="buttonPlus_Copy1_MouseDown">
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FF707070" Opacity="0"/>
             </Button.BorderBrush>
@@ -144,7 +136,7 @@
                 <ImageBrush ImageSource="plus.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonPlus1_Copy" Content="" HorizontalAlignment="Left" Margin="1610,955,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.75,0.594">
+        <Button x:Name="buttonPlus1_Copy" Content="" HorizontalAlignment="Left" Margin="1610,955,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.75,0.594" MouseDown="buttonPlus1_Copy_MouseDown">
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FF707070" Opacity="0"/>
             </Button.BorderBrush>
@@ -166,6 +158,30 @@
             <Button Content="Завтрак" HorizontalContentAlignment="Left">
                 <Button.Background>
                     <SolidColorBrush Color="#FFBDBDBD" Opacity="0"/>
+                </Button.Background>
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                </Button.BorderBrush>
+            </Button>
+            <Button Content="Обед">
+                <Button.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.015"/>
+                </Button.Background>
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                </Button.BorderBrush>
+            </Button>
+            <Button Content="Ужин">
+                <Button.Background>
+                    <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+                </Button.Background>
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0"/>
+                </Button.BorderBrush>
+            </Button>
+            <Button Content="Все включено">
+                <Button.Background>
+                    <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
                 </Button.Background>
                 <Button.BorderBrush>
                     <SolidColorBrush Color="#FF707070" Opacity="0"/>

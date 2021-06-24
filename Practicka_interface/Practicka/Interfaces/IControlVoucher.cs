@@ -10,6 +10,6 @@ namespace Practicka.Interfaces
     public interface IControlVoucher
     {
         bool ReturnVouchers(string country, string dep, string back, string min, string max,string city,string eat, int sale);
-         Voucher ReturnVoucher(int id_voucher);
+         void ReturnVoucher(int id_voucher);
     }
 }

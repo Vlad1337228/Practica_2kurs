@@ -59,8 +59,19 @@ namespace Practicka
         private void buttonLK_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.myProfileWindiw = new MyProfileWindow();
-            MainWindow.mainWindow.Hide();
-            MainWindow.myProfileWindiw.Show();
+            //MainWindow.mainWindow.Hide();
+            if (MainWindow.user != null)
+            {
+                MainWindow.myProfileWindiw.labelNameUser.Content = MainWindow.user.name;
+                MainWindow.myProfileWindiw.labelEmailUser.Content = MainWindow.user.email;
+                if(MainWindow.user.id_voucher!=0)
+                   MainWindow.myProfileWindiw.UserVoucherInfo();
+                MainWindow.myProfileWindiw.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Войдите в аккаунт для просмотра данных о профиле и о путевке.");
+            }
         }
 
         private void buttonBron_Click(object sender, RoutedEventArgs e)
@@ -80,6 +91,11 @@ namespace Practicka
         }
 
         private void textBoxAdeparture_date_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void textBoxArrival_date_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

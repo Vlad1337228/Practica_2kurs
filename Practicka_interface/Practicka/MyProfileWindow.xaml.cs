@@ -79,18 +79,24 @@ namespace Practicka
                         command.ExecuteNonQuery();
                         MainWindow.connection.Close();
                     }
-                    using (SqlCommand command = new SqlCommand($"UPDATE [Client] SET count_voucher={MainWindow.user.count_vouchers - 1} WHERE id={MainWindow.user.id} ", MainWindow.connection))
+                    using (SqlCommand command = new SqlCommand($"UPDATE [Client] SET count_voucher=count_voucher-1 WHERE id={MainWindow.user.id} ", MainWindow.connection))
                     {
                         MainWindow.connection.Open();
                         command.ExecuteNonQuery();
                         MainWindow.connection.Close();
                     }
+                    DeleteSoldVoucher(MainWindow.voucher);
                 }
             }
 
             MainWindow.voucher = new Voucher();
             MainWindow.user.id_voucher = 0;
             UserVoucherInfo();
+        }
+
+        private void DeleteSoldVoucher(Voucher voucher)
+        {
+            
         }
     }
 }

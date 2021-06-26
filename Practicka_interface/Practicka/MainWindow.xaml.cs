@@ -33,7 +33,7 @@ namespace Practicka
         public static User user;
         public static Voucher voucher;
         public static Sold_Voucher sold_voucher;
-        public static Offer offer;
+        public static DateSoldVoucher offer;
         public static List<Voucher> vouchers;
 
         public static bool Vhod = false; // вошел или вышел пользователь
@@ -98,6 +98,64 @@ namespace Practicka
         private void textBoxArrival_date_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void textBoxForm_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void textBoxForm_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void SearchVouchMainForm(object sender, RoutedEventArgs e, string country)
+        {
+            MainWindow.searchWindow = new SearchWindow();
+            MainWindow.searchWindow.textBoxCountry1.Text = country;
+            MainWindow.searchWindow.Button_Click_2(sender, e);
+            MainWindow.searchWindow.Show();
+        }
+
+        private void search1_Click(object sender, RoutedEventArgs e)
+        {
+            SearchVouchMainForm( sender,  e , "Япония");
+        }
+
+        private void search2_Click(object sender, RoutedEventArgs e)
+        {
+            SearchVouchMainForm(sender, e, "Швейцария");
+        }
+
+        private void search3_Click(object sender, RoutedEventArgs e)
+        {
+            SearchVouchMainForm(sender, e, "Турция");
+        }
+
+        private void search4_Click(object sender, RoutedEventArgs e)
+        {
+            SearchVouchMainForm(sender, e, "Дубаи");
+        }
+
+        private void search5_Click(object sender, RoutedEventArgs e)
+        {
+            SearchVouchMainForm(sender, e, "Египет");
+        }
+
+        private void search6_Click(object sender, RoutedEventArgs e)
+        {
+            SearchVouchMainForm(sender, e, "Россия");
+        }
+
+        private void search7_Click(object sender, RoutedEventArgs e)
+        {
+            SearchVouchMainForm(sender, e, "США");
+        }
+
+        private void search8_Click(object sender, RoutedEventArgs e)
+        {
+            SearchVouchMainForm(sender, e, "Канада");
         }
     }
 }

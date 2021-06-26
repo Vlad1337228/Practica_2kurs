@@ -69,7 +69,7 @@ namespace Practicka
            
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        public void Button_Click_2(object sender, RoutedEventArgs e)
         {
             MainWindow.vouchers = null; 
             
@@ -257,49 +257,6 @@ namespace Practicka
             }
         }
 
-        private void buttonPlus1_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-            if (CheckVouch((page-1)*3))
-            {
-                var vouch = MainWindow.vouchers[(page - 1) * 3]; // MainWindow.vouchers[(page-1)*3+1] - для след поля
-                if (MainWindow.user != null)
-                {
-                    //DialogResult dr = new DialogResult();
-                    //if (MainWindow.user.id_voucher != 0)
-                    //{
-                    //     dr= MessageBox.Show("У вас уже добавлена путевка в профиль. Вы точно хотите изменить путевку?","Внимание", MessageBoxButtons.YesNo);
-                    //}
-                    //if(dr.ToString()=="Yes")
-                    //{
-                    //    MainWindow.user.id_voucher = vouch.id;
-                    //    MainWindow.voucher = vouch;
-                    //    using (SqlCommand command = new SqlCommand($"UPDATE [Client] SET id_voucher={vouch.id} WHERE id={MainWindow.user.id} ", MainWindow.connection))
-                    //    {
-                    //        MainWindow.connection.Open();
-                    //        command.ExecuteNonQuery();
-                    //        MainWindow.connection.Close();
-                    //        if (MainWindow.myProfileWindiw != null)
-                    //            MainWindow.myProfileWindiw.UserVoucherInfo();
-                    //    }
-                    //    using (SqlCommand command = new SqlCommand($"UPDATE [Client] SET count_voucher={MainWindow.user.count_vouchers + 1} WHERE id={MainWindow.user.id} ", MainWindow.connection))
-                    //    {
-                    //        MainWindow.connection.Open();
-                    //        command.ExecuteNonQuery();
-                    //        MainWindow.connection.Close();
-                    //    }
-                    //}
-                    PlusVoucher(vouch);
-                }
-                else
-                    MessageBox.Show("Пожалуйста войдите в аккаунт.");
-
-
-                return;
-            }
-            MessageBox.Show("Это поле пустое. Выбирите другую путевку.");
-        }
-
         private void PlusVoucher(Voucher vouch)
         {
             DialogResult dr = new DialogResult();
@@ -325,46 +282,87 @@ namespace Practicka
                     command.ExecuteNonQuery();
                     MainWindow.connection.Close();
                 }
+                if (CheckSoldVouch(vouch))
+                {
+                    using (SqlCommand command = new SqlCommand($"INSERT INTO [Sold_voucher] (Id_sold_voucher, count) VALUES ({vouch.id},{1})  ", MainWindow.connection))
+                    {
+                        MainWindow.connection.Open();
+                        command.ExecuteNonQuery();
+                        MainWindow.connection.Close();
+                    }
+                    
+                }
+                else
+                {
+                    using (SqlCommand command = new SqlCommand($"UPDATE [Sold_voucher] SET count=count+1 WHERE Id_sold_voucher={vouch.id}  ", MainWindow.connection))
+                    {
+                        MainWindow.connection.Open();
+                        command.ExecuteNonQuery();
+                        MainWindow.connection.Close();
+                    }
+                }
+
+                using (SqlCommand command = new SqlCommand($"INSERT INTO [DateSoldVoucher] (id_voucher , DateSoldVoucher ) VALUES ({vouch.id}, CAST('{DateTime.Now.Year}-{DateTime.Now.Month}-{DateTime.Now.Day} ' as datetime))  ", MainWindow.connection))
+                {
+                    MainWindow.connection.Open();
+                    command.ExecuteNonQuery();
+                    MainWindow.connection.Close();
+                }
+
             }
-            
+
         }
 
+        private bool CheckSoldVouch(Voucher v)
+        {
+            using (SqlCommand command = new SqlCommand($"SELECT * FROM [Sold_voucher] WHERE Id_sold_voucher={v.id}  ", MainWindow.connection))
+            {
+                MainWindow.connection.Open();
+                command.ExecuteNonQuery();
+                SqlDataReader s = command.ExecuteReader();
+                if(s.HasRows)
+                {
+                    MainWindow.connection.Close();
+                    s.Close();
+                    return false;
+                }
+                else
+                {
+                    MainWindow.connection.Close();
+                    s.Close();
+                    return true;
+                }
+               
+            }
+        }
 
-       
+        private void buttonPlus1_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+            if (CheckVouch((page-1)*3))
+            {
+                var vouch = MainWindow.vouchers[(page - 1) * 3]; // MainWindow.vouchers[(page-1)*3+1] - для след поля
+                if (MainWindow.user != null)
+                {
+                    PlusVoucher(vouch);
+                }
+                else
+                    MessageBox.Show("Пожалуйста войдите в аккаунт.");
+
+
+                return;
+            }
+            MessageBox.Show("Это поле пустое. Выбирите другую путевку.");
+        }
+
 
         private void buttonPlus_Copy1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (CheckVouch((page - 1) * 3 + 1 ))
             {
-                var vouch = MainWindow.vouchers[(page - 1) * 3 + 1 ]; // MainWindow.vouchers[(page-1)*3+1] - для след поля
+                var vouch = MainWindow.vouchers[(page - 1) * 3 + 1 ]; 
                 if (MainWindow.user != null)
                 {
-                    //DialogResult dr = new DialogResult();
-                    //if (MainWindow.user.id_voucher != 0)
-                    //{
-                    //    dr = MessageBox.Show("У вас уже добавлена путевка в профиль. Вы точно хотите изменить путевку?", "Внимание", MessageBoxButtons.YesNo);
-                    //}
-                    //if (dr.ToString() == "Yes")
-                    //{
-
-                    //}
-                    //MainWindow.user.id_voucher = vouch.id;
-                    //MainWindow.voucher = vouch;
-                    //using (SqlCommand command = new SqlCommand($"UPDATE [Client] SET id_voucher={vouch.id} WHERE id={MainWindow.user.id} ", MainWindow.connection))
-                    //{
-                    //    MainWindow.connection.Open();
-                    //    command.ExecuteNonQuery();
-                    //    MainWindow.connection.Close();
-                    //    if (MainWindow.myProfileWindiw != null)
-                    //        MainWindow.myProfileWindiw.UserVoucherInfo();
-
-                    //}
-                    //using (SqlCommand command = new SqlCommand($"UPDATE [Client] SET count_voucher={MainWindow.user.count_vouchers + 1} WHERE id={MainWindow.user.id} ", MainWindow.connection))
-                    //{
-                    //    MainWindow.connection.Open();
-                    //    command.ExecuteNonQuery();
-                    //    MainWindow.connection.Close();
-                    //}
                     PlusVoucher(vouch);
                 }
                 else
@@ -380,28 +378,9 @@ namespace Practicka
         {
             if (CheckVouch((page - 1) * 3 + 2))
             {
-                var vouch = MainWindow.vouchers[(page - 1) * 3 + 2]; // MainWindow.vouchers[(page-1)*3+1] - для след поля
+                var vouch = MainWindow.vouchers[(page - 1) * 3 + 2]; 
                 if (MainWindow.user != null)
                 {
-                    //DialogResult dr = new DialogResult();
-                    //if (MainWindow.user.id_voucher != 0)
-                    //{
-                    //    dr = MessageBox.Show("У вас уже добавлена путевка в профиль. Вы точно хотите изменить путевку?", "Внимание", MessageBoxButtons.YesNo);
-                    //}
-                    //if (dr.ToString() == "Yes")
-                    //{
-
-                    //}
-                    //MainWindow.user.id_voucher = vouch.id;
-                    //MainWindow.voucher = vouch;
-                    //using (SqlCommand command = new SqlCommand($"UPDATE [Client] SET id_voucher={vouch.id} WHERE id={MainWindow.user.id} ", MainWindow.connection))
-                    //{
-                    //    MainWindow.connection.Open();
-                    //    command.ExecuteNonQuery();
-                    //    MainWindow.connection.Close();
-                    //    if (MainWindow.myProfileWindiw != null)
-                    //        MainWindow.myProfileWindiw.UserVoucherInfo();
-                    //}
                     PlusVoucher(vouch);
                 }
                 else
@@ -413,6 +392,9 @@ namespace Practicka
             MessageBox.Show("Это поле пустое. Выбирите другую путевку.");
         }
 
-       
+        private void buttonPlus1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

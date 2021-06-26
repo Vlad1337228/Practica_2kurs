@@ -120,7 +120,7 @@
         <Label x:Name="labelExRes6" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="838,837,0,0" Width="460" FontFamily="Verdana" FontSize="18" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1"/>
         <Label x:Name="labelRes5_Copy3" Content="Питание" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="690,886,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
         <Label x:Name="labelRes6_Copy3" Content="Стоимость" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="689,940,0,0" Width="133" FontFamily="Verdana" FontSize="18" Foreground="White"/>
-        <Button x:Name="buttonPlus1" Content="" HorizontalAlignment="Left" Margin="1610,591,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.5,0.5" MouseDown="buttonPlus1_MouseDown"  >
+        <Button x:Name="buttonPlus1" Content="" HorizontalAlignment="Left" Margin="1610,591,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.5,0.5" MouseDown="buttonPlus1_MouseDown" Click="buttonPlus1_Click"  >
             <Button.BorderBrush>
                 <SolidColorBrush Color="#FF707070" Opacity="0"/>
             </Button.BorderBrush>

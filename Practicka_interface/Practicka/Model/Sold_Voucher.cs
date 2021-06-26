@@ -11,5 +11,6 @@ namespace Practicka.Model
         public int id { get; set; }
         public int id_voucher { get; set; }
         public int count_sold_vouchers { get; set; }
+        
     }
 }

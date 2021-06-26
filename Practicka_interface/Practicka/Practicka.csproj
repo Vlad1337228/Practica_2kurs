@@ -56,18 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controllers\ControllerOffer.cs" />
+    <Compile Include="Controllers\ControllerDateSoldVoucher.cs" />
     <Compile Include="Controllers\ControllerSold_Voucher.cs" />
     <Compile Include="Controllers\ControllerUser.cs" />
     <Compile Include="Controllers\ControllerVoucher.cs" />
     <Compile Include="EnterWindow.xaml.cs">
       <DependentUpon>EnterWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IControlOffer.cs" />
+    <Compile Include="Interfaces\IControlDateSoldVoucher.cs" />
     <Compile Include="Interfaces\IControlSoldVouchers.cs" />
     <Compile Include="Interfaces\IControlUser.cs" />
     <Compile Include="Interfaces\IControlVoucher.cs" />
-    <Compile Include="Model\Offer.cs" />
+    <Compile Include="Model\DateSoldVoucher.cs" />
     <Compile Include="Model\Sold_Voucher.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\Voucher.cs" />

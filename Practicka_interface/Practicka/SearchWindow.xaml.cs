@@ -37,22 +37,10 @@ namespace Practicka
             }
             else
             {
-               // MainWindow.user.sale = (short)CheckSale(MainWindow.user.count_vouchers);
                 this.textBoxSale.Text = MainWindow.user.sale + "%";
             }
         }
-        //private int CheckSale(int i)
-        //{
-        //    if (i >= 1 && i < 3)
-        //        return 2;
-        //    if (i >= 3 && i < 7)
-        //        return 5;
-        //    if (i >= 7 && i < 10)
-        //        return 8;
-        //    if (i >= 10)
-        //        return 10;
-        //    return 0;
-        //}
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -72,7 +60,6 @@ namespace Practicka
         public void Button_Click_2(object sender, RoutedEventArgs e)
         {
             MainWindow.vouchers = null; 
-            
             var voucher = new ControllerVoucher();
             var country = textBoxCountry1.Text;//str
             var departure = textBoxDate3.Text;//date
@@ -90,25 +77,10 @@ namespace Practicka
             {
                 MessageBox.Show("ошибка в скидке.");
             }
-
-            //if(!voucher.ReturnVouchers(country, departure, back, price_min,price_max, city, eating, sale))
-            //{
-            //    if(MainWindow.vouchers==null)
-            //    {
-
-            //    }
-            //    else
-            //    {
-            //        DisplayVoucher();
-            //    }
-            //}
             page = 1;
             numerable = 0;
             voucher.ReturnVouchers(country, departure, back, price_min, price_max, city, eating, sale);
             DisplayVoucher();
-            
-
-
         }
         
         private void DisplayVoucher()
@@ -172,7 +144,6 @@ namespace Practicka
         }
         private void DeleteVoucherInfo()
         {
-          //  throw new NotImplementedException();//доделать удаление инфы из объявлений
             for (int i = final_advertisement + 1; i < 3; i++)
             {
                 Voucher v = new Voucher();

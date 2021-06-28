@@ -12,11 +12,12 @@ namespace Practicka.Controllers
 {
     public class ControllerVoucher : IControlVoucher
     {
-        private string d1="";
+        private string d1=""; // для дат в методе returnVouchers
         private string d2="";
+        private string s1 = "", s2 = ""; // для предложки, если нет подходящих дат
 
-        private bool flag_date_deparure = true;
-        public bool ReturnVouchers(string country, string dep, string back, string min, string max, string city, string eat, int sale)
+        private bool flag_date_deparure = false;
+        public void ReturnVouchers(string country, string dep, string back, string min, string max, string city, string eat, int sale)
         {
             List<string> list = new List<string>();
             string request;
@@ -51,9 +52,62 @@ namespace Practicka.Controllers
                 OutVouchers(sqlDataReader);
                 MainWindow.connection.Close();
                 sqlDataReader.Close();
+                if (CheckMoreDate(request,MainWindow.vouchers.Count , dep,back) && !flag_date_deparure)
+                {
+
+                    flag_date_deparure = true;
+                    ReturnVouchers(country,s1,s2,min,max,city,eat,sale);
+                }
+                
             }
-           
-            return flag_date_deparure;
+            
+             flag_date_deparure=false;
+        }
+
+        private bool CheckMoreDate(string request, int count ,string dep , string back)
+        {
+            
+            if (request.Contains("departure") && count==0 && !request.Contains("back"))
+            {
+                MessageBox.Show("По вашему запросу ничего не найдено, поэтому мы нашли для вас похожие предложения!");
+                s1=MounthMore(dep,-1);
+                //var date = dep.Split('.');
+                //string s = date[0] + "." + CheckMounth(int.Parse(date[1]), -1).ToString() + date[2];
+                return true;
+            }
+            if (request.Contains("back") && count == 0 && !request.Contains("departure"))
+            {
+                MessageBox.Show("По вашему запросу ничего не найдено, поэтому мы нашли для вас похожие предложения!");
+                s2=MounthMore(back, 1);
+                return true;
+                //var date = back.Split('.');
+                //string s = date[0] + "." + CheckMounth(int.Parse(date[1]), 1 ).ToString() + date[2];
+            }
+            if (request.Contains("departure") && count == 0 && request.Contains("back"))
+            {
+                MessageBox.Show("По вашему запросу ничего не найдено, поэтому мы нашли для вас похожие предложения!");
+                s1=MounthMore(dep, -1);
+                s2=MounthMore(back, 1);
+                return true;
+            }
+            return false;
+        }
+
+        private string MounthMore(string date_, int i)
+        {
+            var date = date_.Split('.');
+            return date[0] + "." + CheckMounth(int.Parse(date[1]), i).ToString() + "." + date[2];
+        }
+
+        private int CheckMounth(int mounth , int r)
+        {
+            if(mounth+r<1)
+                return 12;
+            
+            if (mounth + r > 12)
+                return 1;
+
+            return mounth + r;
         }
 
         public void BetweenDate(string dt1,string dt2 , List<string> l)
@@ -184,7 +238,6 @@ namespace Practicka.Controllers
                 try
                 {
                     d = DateTime.Parse(s);
-                    flag_date_deparure = false;
                     return true;
                 }
                 catch
